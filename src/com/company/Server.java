@@ -18,4 +18,8 @@ public class Server extends Thread {
         }
         System.out.println(getName() + ": Skończyłem");
     }
+    public static void main(String[] args) {
+        Thread t1 = new Server();
+        t1.start();
+    }
 }
