@@ -11,7 +11,7 @@ public class Server extends Thread {
         try (ServerSocket serverSocket = new ServerSocket(8085)) {
             Socket socket = serverSocket.accept();
             DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
-            System.out.println(new String(dataInputStream.readAllBytes()));
+            System.out.println(new String(dataInputStream.readUTF()));
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println();
